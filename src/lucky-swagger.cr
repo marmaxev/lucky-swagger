@@ -1,4 +1,4 @@
-require "./lucky_swagger/*"
+require "./lucky-swagger/**"
 
 module LuckySwagger
   VERSION = "0.1.0"

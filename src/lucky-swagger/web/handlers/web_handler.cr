@@ -18,7 +18,7 @@ module LuckySwagger
           context.response.status_code = 200
           context.response.headers["Content-Type"] = "text/html"
 
-          ECR.embed("#{__DIR__}/../swagger/views/index.html.ecr", context.response)        
+          ECR.embed("#{__DIR__}/../views/index.html.ecr", context.response)        
         elsif swagger_files.includes?(context.request.path.delete('/'))
           @static_handler.call(context)
         else
