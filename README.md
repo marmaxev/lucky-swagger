@@ -1,6 +1,6 @@
 # lucky-swagger
 
-TODO: Write a description here
+This library will help you in adding SwaggerUI to your Lucky project.
 
 ## Installation
 
@@ -14,13 +14,19 @@ TODO: Write a description here
 
 2. Run `shards install`
 
+3. Require lucky-swagger shard
+
+   ```crystal
+   require "lucky-swagger"
+   ```
+
 ## Usage
 
 ### Create OpenAPI .yaml file
 
 Run `lucky lucky_swagger.generate_open_api -f ./swagger/api.yaml `
 
-This will create a new file in `./swagger` folder with a description in the OpenAPI format for project and methods that have `api`  in scopes.
+This will create a new file in `./swagger` folder with a description in the OpenAPI format for your project and methods that have `api`  in scopes.
 
 For example,
 
@@ -76,8 +82,6 @@ Modify this file according to the OpenAPI format to change the description of th
 In your file `./src/app_server.cr` add new handler - `LuckySwagger::Handlers::WebHandler`.
 
 ```crystal
-require "lucky-swagger"
-
 class AppServer < Lucky::BaseAppServer
   def middleware : Array(HTTP::Handler)
     [
@@ -99,10 +103,6 @@ end
 Learn about middleware with HTTP::Handlers: https://luckyframework.org/guides/http-and-routing/http-handlers.
 
 **Restart** your server and visit `your-server-address/swagger` to access SwaggerUI for your API.
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
