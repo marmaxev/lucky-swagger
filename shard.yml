@@ -9,6 +9,6 @@ crystal: ">= 1.0.0"
 dependencies:
   lucky:
     github: luckyframework/lucky
-    version: "<= 0.29.0"
+    branch: main
 
 license: MIT
